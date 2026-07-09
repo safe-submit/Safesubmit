@@ -1,75 +1,47 @@
-# SafeSubmit Website
+# SafeSubmit Shield 🛡️
 
-This is a static website connected directly to the Botpress Chat API:
+SafeSubmit Shield is an enterprise-grade client-side security proxy and sandbox interface designed to intercept, analyze, and sanitize sensitive information before it reaches public Large Language Models (LLMs). Powered by the **ScanCore Engine**, it acts as a corporate privacy firewall to prevent accidental data leaks.
 
-```text
-https://chat.botpress.cloud/d2671494-99a0-4023-ac5e-83533a8d44e9
-```
+---
 
-Because it is static, it can run on GitHub Pages for free.
+## 🚀 Live Demo
+View the live deployment on GitHub Pages:  
+👉 **[Insert Your Live GitHub Pages URL Here]**
 
-## Run Locally
+---
 
-Option 1:
+## ✨ Key Features
 
-Double-click:
+* **Multi-Channel Input Processing:** Seamlessly switches between scanning raw plaintext, document files (`.txt`, `.md`), and data-URL image assets.
+* **ScanCore Engine Core Security:** Detects and flags high-risk content, including API credentials, source logs, telemetry database strings, and Personally Identifiable Information (PII).
+* **Interactive Sandbox Interface Driven by Botpress:** Utilizes Botpress as the real-time scanning agent to execute compliance evaluations, flag dangerous payloads, and handle chat routing workflows in the simulation space.
+* **Integrations Hub:** Supports expanded architecture layout modules for custom platform connectivity (including modular components ready for Telegram and Discord integrations).
+* **Zero Jekyll Overrides:** Optimized for modern static deployments via custom `.nojekyll` pipeline integrations.
 
-```text
-start-local.bat
-```
+---
 
-Then open:
+## 🤖 Deep-Dive: Botpress Scanning Setup
 
-```text
-http://localhost:4173
-```
+The system combines front-end security checking with cloud-based chat intelligence:
+1. **Frontend Capture (`app.js`):** Intercepts data blocks, parsing text inputs or files before they leave the browser context.
+2. **Botpress Middleware:** The app safely pipes simulated payloads into a Botpress Cloud instance, which executes automated rule evaluations to determine if data strings violate corporate privacy metrics.
 
-Option 2:
+---
 
-Open a terminal in this folder and run:
+## 🛠️ Architecture & Project Structure
 
-```powershell
-python -m http.server 4173
-```
-
-Then open:
+The project is built entirely on a lightweight, static architecture using native HTML5, modern CSS3 layout variables, and raw React (without a heavy build step) for seamless runtime execution.
 
 ```text
-http://localhost:4173
-```
-
-## Host on GitHub Pages
-
-Recommended method:
-
-1. Create a new GitHub repository.
-2. Upload everything in this folder to the repository:
-
-```text
-D:\C240\safesubmit\safesubmit\safesubmit
-```
-
-3. On GitHub, open the repository.
-4. Go to `Settings` -> `Pages`.
-5. Under `Build and deployment`, set `Source` to `Deploy from a branch`.
-6. Select your branch, usually `main`.
-7. Select `/root` if you uploaded these files directly to the repository root.
-8. Click `Save`.
-9. Wait for GitHub to show your public website URL.
-
-Alternative method:
-
-If you prefer GitHub Pages from `/docs`, upload this whole project and set Pages to use `/docs`. The `docs` folder contains the same website files.
-
-## Important
-
-Do not upload only `index.html`. The website also needs:
-
-- `app.js`
-- `style.css`
-- `.nojekyll`
-
-The old local `/botpress` proxy is no longer required for GitHub Pages.
+├── index.html          # Main landing page & enterprise product overview
+├── chatbot.html        # Interactive chatbot live sandbox wrapper
+├── architecture.html   # Documentation detailing ScanCore data-flow layout
+├── engines.html        # Deep-dive specs of the filtering & inspection rules
+├── extensions.html     # Setup instructions for custom browser and chat channels
+├── app.js              # Core React logic, Botpress API router, & file upload parsers
+├── style.css           # Global custom design styles and theme properties
+├── brand-icon-img.png  # Main brand asset logo
+└── .nojekyll           # Disables Jekyll lifecycle tracking on GitHub Pages
 
 The live chat supports Botpress choices, plaintext scans, `.txt` / `.md` uploads, and image uploads directly from the browser.
 
