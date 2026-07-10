@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<!doctype html>
-<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SafeSubmit — Architecture</title>
+  <title>SafeSubmit — About</title>
   <link rel="stylesheet" href="./style.css?v=1.1" />
 </head>
 <body>
- <!-- UPDATED FIXED NAVIGATION BAR -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-brand-link">
@@ -17,81 +14,76 @@
         <div class="nav-title">SafeSubmit</div>
       </a>
 
-      <!-- Hamburger Menu Toggle Button for Mobile Screens -->
       <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" id="mobile-toggle">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <!-- The Navigation Links Panel (Acts as desktop header row OR mobile sidebar) -->
       <div class="nav-menu" id="nav-menu-panel">
         <a href="extensions.html">Custom Integrations</a>
         <a href="engines.html">Core Engines</a>
-        <a href="architecture.html">Architecture</a>
+        <a href="architecture.html">About</a>
         <a href="sandbox.html" class="nav-cta">Launch Chatbot</a>
       </div>
     </div>
   </nav>
 
   <main>
-    <section class="landing-pipeline">
+    <section class="about-page">
       <div class="section-heading">
-        <h2>ScanCore Data Validation Lifecycle</h2>
-        <p>Detailed step-by-step documentation describing how content flows through ScanCore.</p>
+        <h2>About SafeSubmit</h2>
+        <p>We’re a small team building secure AI workflows that help people share content with confidence and clarity.</p>
       </div>
 
-      <div class="pipeline-flow">
-        <div class="step">
-          <div class="step-badge"><span class="step-num">1</span></div>
-          <h4>Channel Classification</h4>
-          <p>
-            Incoming content is analyzed to determine channel:
-            <strong>plaintext, files (txt/md), or images</strong>. Classification triggers the correct parsing pipeline and selects encoder models tuned for that channel.
-          </p>
-          <p>
-            Key considerations:
-          </p>
-          <ul style="margin-top:8px;color:#94a3b8;">
-            <li>Heuristic headers and mimetype detection</li>
-            <li>User agent and metadata influence</li>
-            <li>Auto-fallback strategies for ambiguous payloads</li>
-          </ul>
-        </div>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-avatar">AL</div>
+          <h3>Alicia Lee</h3>
+          <p class="team-role">Product & UX</p>
+          <p>Shapes the experience and makes complex safety flows feel approachable for everyday users.</p>
+          <div class="team-socials">
+            <a href="#" class="social-pill">LinkedIn</a>
+            <a href="#" class="social-pill">GitHub</a>
+          </div>
+        </article>
 
-        <div class="step">
-          <div class="step-badge"><span class="step-num">2</span></div>
-          <h4>Proxy Serialization</h4>
-          <p>
-            Content is normalized into a canonical proxy object that preserves context and provenance.
-          </p>
-          <p>Serialization includes:</p>
-          <ul style="margin-top:8px;color:#94a3b8;">
-            <li>Tokenization and positional offsets</li>
-            <li>Embedded metadata (source, timestamps)</li>
-            <li>Vector embedders per-channel and chunking strategies</li>
-          </ul>
-        </div>
+        <article class="team-card">
+          <div class="team-avatar">JM</div>
+          <h3>Jordan Miles</h3>
+          <p class="team-role">AI Safety Lead</p>
+          <p>Designs the detection logic and policy rules that power SafeSubmit’s content checks.</p>
+          <div class="team-socials">
+            <a href="#" class="social-pill">LinkedIn</a>
+            <a href="#" class="social-pill">X</a>
+          </div>
+        </article>
 
-        <div class="step">
-          <div class="step-badge"><span class="step-num">3</span></div>
-          <h4>ScanCore Assessment</h4>
-          <p>
-            The assessment engine runs multi-vector similarity checks, policy evaluation, and severity scoring. Outputs include verdicts, evidence spans and recommended redactions.
-          </p>
-          <p>Outputs:</p>
-          <ul style="margin-top:8px;color:#94a3b8;">
-            <li>Structured assessment JSON (status, risk, excerpts)</li>
-            <li>Confidence and rationale traces</li>
-            <li>Integrations for reporting and enforcement</li>
-          </ul>
+        <article class="team-card">
+          <div class="team-avatar">SK</div>
+          <h3>Sara Kim</h3>
+          <p class="team-role">Platform Engineer</p>
+          <p>Builds the integrations and keeps the product reliable across every workflow.</p>
+          <div class="team-socials">
+            <a href="#" class="social-pill">LinkedIn</a>
+            <a href="#" class="social-pill">GitHub</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="app-socials-section">
+        <h3>Follow SafeSubmit</h3>
+        <div class="app-socials">
+          <a href="#" class="cta-button secondary">GitHub</a>
+          <a href="#" class="cta-button secondary">LinkedIn</a>
+          <a href="#" class="cta-button secondary">Discord</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="platform-footer">
-    Architecture • SafeSubmit © <span id="year-arch"></span>
+    About • SafeSubmit © <span id="year-arch"></span>
   </footer>
 
   <script>document.getElementById('year-arch').textContent = new Date().getFullYear();</script>

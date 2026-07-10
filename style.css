@@ -273,53 +273,100 @@ body {
   font-size: 0.95rem;
 }
 
-/* Core System Pipeline Architecture Section */
-.landing-pipeline {
+/* About Page Section */
+.about-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 24px 120px 24px;
 }
 
-.pipeline-flow {
-  display: flex;
-  justify-content: space-between;
-  gap: 32px;
-  position: relative;
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
 }
 
-.step {
-  flex: 1;
+.team-card {
   background: var(--bg-card);
   padding: 32px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.03);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.step-badge {
-  width: 40px;
-  height: 40px;
-  background: rgba(252, 60, 132, 0.1);
-  border: 1px solid rgba(252, 60, 132, 0.3);
-  color: var(--accent-pink);
-  border-radius: 50%;
+.team-avatar {
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background: rgba(252, 60, 132, 0.12);
+  color: var(--accent-pink);
   font-weight: 700;
-  margin-bottom: 20px;
+  font-size: 1rem;
 }
 
-.step h4 {
-  font-size: 1.15rem;
+.team-card h3 {
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 10px;
 }
 
-.step p {
+.team-role {
+  color: var(--accent-pink);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.team-card p {
   color: #94a3b8;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.team-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  text-decoration: none;
   font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.social-pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.app-socials-section {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.app-socials-section h3 {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+
+.app-socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 /* Dynamic Interactive Sandbox Section Area */
