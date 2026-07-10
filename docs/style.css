@@ -161,25 +161,54 @@ body {
 .feature-card p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
 
 /* Section 3: Tech Flow Steps */
-.landing-pipeline { padding: 100px 24px; border-top: 1px solid rgba(255, 255, 255, 0.03); }
-.pipeline-flow { display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; max-width: 1200px; margin: 0 auto; }
-.step { flex: 1; min-width: 260px; max-width: 340px; text-align: center; }
-.step-badge { display: flex; justify-content: center; margin-bottom: 20px; }
+.landing-pipeline {
+  padding: 100px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+.pipeline-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.step {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 32px;
+  min-height: 260px;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+.step-badge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 .step-num {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: rgba(37, 99, 235, 0.1);
-  color: #3b82f6;
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  width: 48px;
+  height: 48px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 50%;
   font-weight: 700;
   font-size: 1.1rem;
 }
-.step h4 { font-size: 1.15rem; margin-bottom: 10px; font-weight: 600; }
-.step p { color: #64748b; font-size: 0.95rem; line-height: 1.5; }
+.step h4 {
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.step p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.75;
+}
 
 /* Section 4: Live Sandboxed Interactive Workspace */
 .app-workspace-section {
