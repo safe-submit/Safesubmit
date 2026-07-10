@@ -431,11 +431,12 @@ body {
 }
 
 .social-icon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: #000;
-  padding: 4px;
+  mix-blend-mode: multiply;
+  background: transparent;
+  padding: 0;
   margin-top: 0;
 }
 
