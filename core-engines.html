@@ -42,31 +42,36 @@
       <div class="features-grid">
         <article class="feature-card">
           <div class="card-icon">📝</div>
-          <h3>Plaintext Filtering</h3>
-          <p>
-            Token-aware filtering with deterministic pattern rules and ML-assisted classifiers.
-          </p>
-          <p style="color:#94a3b8;margin-top:8px;">
-            Features:
-          </p>
+          <h3>Plaintext Filtering &amp; NLP Analysis</h3>
+          <p>*Optimized for direct chat inputs, messages, and raw text strings.*</p>
           <ul style="margin-top:8px;color:#94a3b8;">
-            <li>High-throughput token scanning with context windows</li>
-            <li>Adaptive rule sets for PII/credentials (emails, SSNs, keys)</li>
-            <li>Confidence scoring and redaction offsets</li>
+            <li><strong>Context-Aware Token Scanning:</strong> Analyzes text using tokenized context windows to identify malicious patterns or prompt injection attempts before they execute.</li>
+            <li><strong>Deterministic Pattern Rules:</strong> Matches known signatures for sensitive data leaks, including PII (emails, names) and credentials (API keys, passwords).</li>
+            <li><strong>Confidence Scoring:</strong> Generates a granular risk probability score that feeds into the final assessment, ensuring the user gets a clear rationale for the flag.</li>
           </ul>
         </article>
 
         <article class="feature-card">
           <div class="card-icon">📚</div>
-          <h3>Document Compliance</h3>
-          <p>Multi-format parsing for DOCX, PDF, and structured text to extract sections for compliance checks.</p>
+          <h3>Multi-Format Document Compliance</h3>
+          <p>*Optimized for file uploads like DOCX, PDF, and structured text sheets.*</p>
           <ul style="margin-top:8px;color:#94a3b8;">
-            <li>Preserves document structure and metadata</li>
-            <li>Section-aware policy enforcement (headers, footers, attachments)</li>
-            <li>Exportable compliance reports and suggested redactions</li>
+            <li><strong>Structure-Preserving Extraction:</strong> Automatically parses complex files, separating headers, footers, body text, and embedded metadata without altering the underlying document structure.</li>
+            <li><strong>Section-Aware Policy Enforcement:</strong> Scans specific regions of a document (e.g., footers for classification markings, attachments for hidden scripts) to enforce compliance standards.</li>
+            <li><strong>Granular Vulnerability Mapping:</strong> Generates exportable logs breaking down exactly which page, section, or line triggered a compliance or security risk.</li>
           </ul>
         </article>
 
+        <article class="feature-card">
+          <div class="card-icon">🖼️</div>
+          <h3>Visual &amp; Multi-Modal Inspection</h3>
+          <p>*Optimized for screenshots, image attachments, and scanned documents.*</p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li><strong>OCR-Driven Text Extraction:</strong> Pulls embedded text from images and screenshots to check for hidden credentials, leaked code, or sensitive data.</li>
+            <li><strong>Metadata &amp; Property Auditing:</strong> Inspects file headers, geolocation data, and image properties for hidden tracking scripts or anomalies.</li>
+            <li><strong>Vision-Based Threat Assessment:</strong> Evaluates visual layouts to flag potentially sensitive environments, confidential documents captured in photos, or explicit content.</li>
+          </ul>
+        </article>
       </div>
     </section>
   </main>
