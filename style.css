@@ -163,20 +163,58 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 60px auto;
+  margin: 80px auto;
   padding: 0 24px;
+  min-height: 500px;
 }
 
 .video-demo-section video {
   width: 100%;
   max-width: 900px;
   height: auto;
+  min-height: 450px;
   aspect-ratio: 16 / 9;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   background: #000;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .video-demo-section {
+    min-height: 400px;
+  }
+
+  .video-demo-section video {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-demo-section {
+    margin: 60px auto;
+    padding: 0 16px;
+    min-height: 300px;
+  }
+
+  .video-demo-section video {
+    min-height: 250px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-demo-section {
+    margin: 40px auto;
+    padding: 0 12px;
+    min-height: 220px;
+  }
+
+  .video-demo-section video {
+    min-height: 180px;
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 768px) {
