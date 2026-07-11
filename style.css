@@ -446,16 +446,12 @@ body {
 }
 
 .team-avatar {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 72px;  /* Increased slightly from 56px to give the faces more breathing room */
+  height: 72px;
   border-radius: 50%;
-  background: rgba(252, 60, 132, 0.12);
-  color: var(--accent-pink);
-  font-weight: 700;
-  font-size: 1rem;
+  object-fit: cover; /* This makes the image scale crop proportionally */
+  border: 2px solid var(--accent-pink); /* Optional: gives a nice subtle glowing border matching your theme */
+  box-shadow: 0 4px 12px rgba(252, 60, 132, 0.2);
 }
 
 .team-card h3 {
